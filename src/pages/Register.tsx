@@ -217,7 +217,6 @@ const Register = () => {
                 <div className="flex flex-col items-center justify-center space-y-2">
                   <div className="flex items-center">
                     <img 
-                      src="/lovable-uploads/c2ab8b88-6190-49fe-af92-35a0a53524b0.png" 
                       alt="Digital India Initiative" 
                       className="h-6 mr-2"
                     />
