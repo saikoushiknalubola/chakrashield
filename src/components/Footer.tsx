@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Shield } from 'lucide-react';
+import { Link } from "react-router-dom";
 import AshokChakra from './AshokChakra';
 
 const Footer = () => {
@@ -33,37 +34,37 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-3 text-india-saffron">Platform</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/scan" className="hover:text-india-saffron">Profile Scanner</a></li>
-              <li><a href="/dashboard" className="hover:text-india-saffron">Agency Dashboard</a></li>
-              <li><a href="/blockchain" className="hover:text-india-saffron">Blockchain Registry</a></li>
-              <li><a href="/reports" className="hover:text-india-saffron">Reports</a></li>
+              <li><Link to="/scan" className="hover:text-india-saffron">Profile Scanner</Link></li>
+              <li><Link to="/dashboard" className="hover:text-india-saffron">Agency Dashboard</Link></li>
+              <li><Link to="/blockchain" className="hover:text-india-saffron">Blockchain Registry</Link></li>
+              <li><Link to="/reports" className="hover:text-india-saffron">Reports</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold mb-3 text-india-saffron">Resources</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/documentation" className="hover:text-india-saffron">Documentation</a></li>
-              <li><a href="/agencies" className="hover:text-india-saffron">For Agencies</a></li>
-              <li><a href="/api" className="hover:text-india-saffron">API Integration</a></li>
-              <li><a href="/research" className="hover:text-india-saffron">Research Papers</a></li>
+              <li><Link to="/documentation" className="hover:text-india-saffron">Documentation</Link></li>
+              <li><Link to="/agencies" className="hover:text-india-saffron">For Agencies</Link></li>
+              <li><Link to="/api" className="hover:text-india-saffron">API Integration</Link></li>
+              <li><Link to="/research" className="hover:text-india-saffron">Research Papers</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-3 text-india-saffron">Government</h4>
+            <h4 className="font-semibold mb-3 text-india-saffron">Digital India</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="https://www.meity.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-india-saffron">Ministry of Electronics & IT</a></li>
-              <li><a href="https://www.mha.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-india-saffron">Ministry of Home Affairs</a></li>
+              <li><a href="https://digitalindia.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-india-saffron">Digital India Portal</a></li>
+              <li><a href="https://www.mygov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-india-saffron">MyGov</a></li>
               <li><a href="https://www.cert-in.org.in/" target="_blank" rel="noopener noreferrer" className="hover:text-india-saffron">CERT-In</a></li>
-              <li><a href="https://digitalindia.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-india-saffron">Digital India</a></li>
+              <li><a href="https://uidai.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-india-saffron">Aadhaar</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold mb-3 text-india-saffron">Contact</h4>
             <ul className="space-y-2 text-sm">
-              <li>Email: support@chakrashield.gov.in</li>
+              <li>Email: support@chakrashield.in</li>
               <li>Helpline: 1800-XXX-XXXX</li>
               <li>For emergencies: cybersoc@cert-in.org.in</li>
             </ul>
@@ -73,10 +74,10 @@ const Footer = () => {
         <div className="pt-6 border-t border-white/10 text-sm text-center md:flex md:justify-between md:items-center">
           <p>© 2023 ChakraShield - All rights reserved</p>
           <div className="mt-4 md:mt-0 flex flex-wrap justify-center md:justify-end gap-4">
-            <a href="/terms" className="hover:text-india-saffron">Terms of Service</a>
-            <a href="/privacy" className="hover:text-india-saffron">Privacy Policy</a>
-            <a href="/security" className="hover:text-india-saffron">Security</a>
-            <a href="/accessibility" className="hover:text-india-saffron">Accessibility</a>
+            <Link to="/terms" className="hover:text-india-saffron">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-india-saffron">Privacy Policy</Link>
+            <Link to="/security" className="hover:text-india-saffron">Security</Link>
+            <Link to="/accessibility" className="hover:text-india-saffron">Accessibility</Link>
           </div>
         </div>
       </div>
