@@ -8,17 +8,21 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AshokChakra from './AshokChakra';
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  // Don't show login/register buttons if we're already on those pages
+  const showAuthButtons = !['/login', '/register'].includes(location.pathname);
 
   return (
     <header className="w-full bg-india-navyBlue text-white">
@@ -56,33 +60,39 @@ const Header = () => {
       {/* Main header with logo and navigation */}
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center">
-          <div className="mr-3">
-            <Shield className="h-8 w-8 text-india-saffron" />
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-center">
-              <h1 className="text-xl md:text-2xl font-bold mr-2">
-                ChakraShield
-              </h1>
-              <AshokChakra size="sm" />
+          <Link to="/" className="flex items-center">
+            <div className="mr-3">
+              <Shield className="h-8 w-8 text-india-saffron" />
             </div>
-            <p className="text-xs md:text-sm font-devanagari">
-              साइबर सुरक्षा प्रणाली
-            </p>
-          </div>
+            <div className="flex flex-col">
+              <div className="flex items-center">
+                <h1 className="text-xl md:text-2xl font-bold mr-2">
+                  ChakraShield
+                </h1>
+                <AshokChakra size="sm" />
+              </div>
+              <p className="text-xs md:text-sm font-devanagari">
+                साइबर सुरक्षा प्रणाली
+              </p>
+            </div>
+          </Link>
         </div>
 
         <div className="flex items-center space-x-2">
-          <Link to="/login">
-            <Button variant="ghost" className="text-white hidden md:flex">
-              Login
-            </Button>
-          </Link>
-          <Link to="/register">
-            <Button className="bg-india-saffron hover:bg-india-saffron/90 text-white hidden md:flex">
-              Register
-            </Button>
-          </Link>
+          {showAuthButtons && (
+            <>
+              <Link to="/login">
+                <Button variant="ghost" className="text-white hidden md:flex">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/register">
+                <Button className="bg-india-saffron hover:bg-india-saffron/90 text-white hidden md:flex">
+                  Register
+                </Button>
+              </Link>
+            </>
+          )}
           <Button variant="ghost" className="md:hidden p-2" onClick={toggleMobileMenu}>
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -118,14 +128,16 @@ const Header = () => {
             <Link to="/reports" className="text-white text-xl font-medium" onClick={toggleMobileMenu}>Reports</Link>
             <Link to="/alerts" className="text-white text-xl font-medium" onClick={toggleMobileMenu}>Alerts</Link>
             <Link to="/about" className="text-white text-xl font-medium" onClick={toggleMobileMenu}>About</Link>
-            <div className="pt-6 flex flex-col space-y-3">
-              <Link to="/login">
-                <Button variant="outline" className="w-40">Login</Button>
-              </Link>
-              <Link to="/register">
-                <Button className="bg-india-saffron hover:bg-india-saffron/90 text-white w-40">Register</Button>
-              </Link>
-            </div>
+            {showAuthButtons && (
+              <div className="pt-6 flex flex-col space-y-3">
+                <Link to="/login" onClick={toggleMobileMenu}>
+                  <Button variant="outline" className="w-40">Login</Button>
+                </Link>
+                <Link to="/register" onClick={toggleMobileMenu}>
+                  <Button className="bg-india-saffron hover:bg-india-saffron/90 text-white w-40">Register</Button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}
