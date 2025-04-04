@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
 
-## Project info
+# 🛡️ ChakraShield – Fake Social Media Account Detection System
 
-**URL**: https://lovable.dev/projects/99abd0d6-7b9c-4752-89c1-c42f0ec2234e
+**ChakraShield** is a highly innovative and secure web-based platform designed to **detect, report, and aid in the elimination of fake social media accounts** across platforms such as Facebook, Instagram, and X (formerly Twitter). Tailored for national cybersecurity needs, especially for government and defense agencies like ITBP, ChakraShield blends Artificial Intelligence, Machine Learning, and Blockchain technology to ensure digital trust and user authenticity.
 
-## How can I edit this code?
+> 🌐 **Live Prototype**: [chakra-shield-sentinel.lovable.app](https://chakra-shield-sentinel.lovable.app)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ✨ Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/99abd0d6-7b9c-4752-89c1-c42f0ec2234e) and start prompting.
+- 🔍 **AI/ML-Powered Detection** – Uses NLP and image recognition to detect suspicious behavior, fake identities, and bot-like patterns.
+- 🧠 **BERT-based Language Model** – Scans bio, comments, and activity for harmful language, propaganda, and impersonation.
+- 🧑‍🦰 **DeepFace Integration** – Validates profile images using facial recognition against known datasets.
+- 📊 **Suspicious Score System** – Every profile is assigned a trust score based on multiple factors (text/image/time/IP).
+- 🏢 **Centralized Reporting Dashboard (ChakraPanel)** – Government agencies can view, verify, and report accounts to platforms.
+- 🔐 **Blockchain Logging** – Ensures tamper-proof evidence trails and proof-of-reporting for legal use.
+- 🔔 **Real-time Alerts** – Admins are alerted of fake account activities immediately through the ChakraShield system.
+- 📄 **Report Generation** – Fake profiles are logged and printable reports are generated for platform and legal action.
+- 📲 **Integration with Official Social Media APIs** – Real-time profile scanning and flagging using developer APIs.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+##  System Architecture
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+User → ChakraShield Web Portal → AI/ML Engine → Confidence Scoring → ChakraPanel Dashboard → Blockchain Log → Social Media Platforms
 ```
 
-**Edit a file directly in GitHub**
+**Tech Stack:**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Frontend**: HTML, CSS, Bootstrap (React in roadmap)
+- **Backend**: FastAPI (Python)
+- **ML Models**: BERT, DeepFace, Random Forest
+- **Database**: MongoDB (NoSQL)
+- **Authentication**: Firebase Auth + JWT
+- **Reporting**: PDF generation, export to CSV
+- **Hosting**: AWS EC2 / Firebase Hosting
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🔁 How It Works
 
-## What technologies are used for this project?
+1. User or admin enters a suspected profile link or username.
+2. ChakraShield fetches public profile details via API.
+3. ML models analyze profile image, username pattern, and activity.
+4. Trustworthiness score is calculated.
+5. Fake/suspicious accounts are flagged with reason & score.
+6. Central agency gets real-time alert and dashboard visibility.
+7. Verified reports are sent to platforms via email/API.
+8. Logs are hashed and saved on blockchain for legal trail.
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/99abd0d6-7b9c-4752-89c1-c42f0ec2234e) and click on Share -> Publish.
+## 🧩 Future Enhancements
 
-## Can I connect a custom domain to my Lovable project?
+- 🤖 Add deep fake detection using GAN inversion techniques.
+- 🇮🇳 Integration with DigiLocker for real ID verification.
+- 📞 Emergency contact features for direct legal or defense agency alerts.
+- 🧾 Aadhaar/EPIC verification API for critical profiles (only for government use).
+- 📚 National AI Training Dataset expansion with CERT-In.
 
-Yes it is!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 👨‍💻 Team ChakraShield – Contributors
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+| Name                   | Roll Number   |
+|------------------------|---------------|
+| Saikoushik Nalubola    | 2403A52L02     |
+| Syed Althaf            | 2303A52496     |
+| D Nihaal Krishna       | 2303A52498     |
+
+---
+
+## 🛡️ Vision
+
+> **“To empower the nation’s digital boundaries and eliminate the threat of impersonation, propaganda, and cyber psychological operations (CYPsyOps) with AI and trust.”**
+
+---
