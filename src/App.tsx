@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Scan from "./pages/Scan";
 import Dashboard from "./pages/Dashboard";
 import Blockchain from "./pages/Blockchain";
+import Reports from "./pages/Reports";
+import Alerts from "./pages/Alerts";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/scan" element={<Scan />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/blockchain" element={<Blockchain />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/alerts" element={<Alerts />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
