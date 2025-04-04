@@ -71,7 +71,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-gray-400" />
-                <span>Helpline: 1800-XXX-XXXX</span>
+                <span>Helpline: 1800-333-9999</span>
               </li>
               <li className="flex items-center">
                 <HelpCircle className="h-4 w-4 mr-2 text-gray-400" />

@@ -165,7 +165,7 @@ const About = () => {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="mb-6 md:mb-0 md:mr-8">
                   <img 
-                    src="/lovable-uploads/c2ab8b88-6190-49fe-af92-35a0a53524b0.png" 
+                    src="/https://ibb.co/STVVVBs" 
                     alt="Digital India Initiative" 
                     className="h-24"
                   />
