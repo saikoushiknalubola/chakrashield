@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, ExternalLink, Mail, Phone, HelpCircle } from 'lucide-react';
+import { Shield, ExternalLink, Mail, Phone, HelpCircle, Code } from 'lucide-react';
 import { Link } from "react-router-dom";
 import AshokChakra from './AshokChakra';
 
@@ -78,6 +78,19 @@ const Footer = () => {
                 <span>cybersoc@cert-in.org.in</span>
               </li>
             </ul>
+          </div>
+        </div>
+        
+        {/* Developer credit section */}
+        <div className="py-4 my-4 border-t border-b border-white/10">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4">
+            <div className="flex items-center">
+              <Code className="h-5 w-5 mr-2 text-india-saffron animate-pulse" />
+              <span className="font-medium">Developed by:</span>
+            </div>
+            <div className="bg-white/10 px-4 py-2 rounded-full">
+              <span className="font-bold text-india-saffron">Saikoushik Nalubola</span>
+            </div>
           </div>
         </div>
         

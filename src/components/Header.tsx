@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Shield, Menu, Globe, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -9,13 +9,16 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Link, useLocation } from "react-router-dom";
+import { useToast } from "@/components/ui/use-toast";
 import AshokChakra from './AshokChakra';
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("English");
   const isMobile = useIsMobile();
   const location = useLocation();
+  const { toast } = useToast();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -24,15 +27,28 @@ const Header = () => {
   // Don't show login/register buttons if we're already on those pages
   const showAuthButtons = !['/login', '/register'].includes(location.pathname);
 
+  const handleLanguageChange = (language: string) => {
+    setCurrentLanguage(language);
+    
+    toast({
+      title: "Language Changed",
+      description: `Language has been set to ${language}`,
+      duration: 3000,
+    });
+    
+    // Simulated language change for demo purposes
+    console.log(`Language changed to: ${language}`);
+  };
+
   return (
     <header className="w-full bg-india-navyBlue text-white shadow-lg">
       {/* Main header with logo and navigation */}
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <div className="mr-3 relative">
-              <div className="absolute inset-0 bg-india-saffron rounded-full opacity-20 animate-pulse"></div>
-              <Shield className="h-9 w-9 text-india-saffron relative z-10" />
+            <div className="mr-3 relative group">
+              <div className="absolute inset-0 bg-india-saffron rounded-full opacity-20 animate-pulse group-hover:opacity-40 transition-opacity"></div>
+              <Shield className="h-9 w-9 text-india-saffron relative z-10 group-hover:scale-110 transition-transform" />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center">
@@ -53,21 +69,21 @@ const Header = () => {
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm" className="bg-transparent border-white/20 text-white hover:bg-white/10">
                 <Globe className="mr-1 h-4 w-4" />
-                <span className="hidden sm:inline">Language</span>
+                <span className="hidden sm:inline">{currentLanguage}</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-white">
-              <DropdownMenuItem>English</DropdownMenuItem>
-              <DropdownMenuItem className="font-devanagari">हिंदी</DropdownMenuItem>
-              <DropdownMenuItem>தமிழ்</DropdownMenuItem>
-              <DropdownMenuItem>বাংলা</DropdownMenuItem>
-              <DropdownMenuItem>తెలుగు</DropdownMenuItem>
-              <DropdownMenuItem>മലയാളം</DropdownMenuItem>
-              <DropdownMenuItem>ಕನ್ನಡ</DropdownMenuItem>
-              <DropdownMenuItem>ગુજરાતી</DropdownMenuItem>
-              <DropdownMenuItem>ଓଡ଼ିଆ</DropdownMenuItem>
-              <DropdownMenuItem>অসমীয়া</DropdownMenuItem>
-              <DropdownMenuItem>ਪੰਜਾਬੀ</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("English")}>English</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("हिंदी")} className="font-devanagari">हिंदी</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("தமிழ்")}>தமிழ்</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("বাংলা")}>বাংলা</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("తెలుగు")}>తెలుగు</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("മലയാളം")}>മലയാളം</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("ಕನ್ನಡ")}>ಕನ್ನಡ</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("ગુજરાતી")}>ગુજરાતી</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("ଓଡ଼ିଆ")}>ଓଡ଼ିଆ</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("অসমীয়া")}>অসমীয়া</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange("ਪੰਜਾਬੀ")}>ਪੰਜਾਬੀ</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Search, Shield, Database, FileText, BellRing } from 'lucide-react';
+import { Search, Shield, Database, FileText, BellRing, Cpu, Brain } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import AshokChakra from '../AshokChakra';
@@ -94,11 +94,6 @@ const Hero = () => {
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-india-navyBlue flex items-center justify-center">
               <span>Digital India Initiatives</span>
-              <img 
-                src="/lovable-uploads/c2ab8b88-6190-49fe-af92-35a0a53524b0.png" 
-                alt="Digital India" 
-                className="h-10 ml-3"
-              />
             </h2>
             <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
               Empowering citizens through technology and making India a digitally empowered society
@@ -106,28 +101,67 @@ const Hero = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow transform hover:-translate-y-1 duration-300">
               <Shield className="h-10 w-10 text-india-saffron mb-4" />
               <h3 className="text-lg font-semibold mb-2">Cyber Suraksha</h3>
               <p className="text-gray-600 text-sm">
-                Protecting citizens from online fraud and cyber threats through advanced AI systems.
+                Protecting citizens from online fraud and cyber threats through advanced AI systems and nationwide cybersecurity infrastructure.
               </p>
             </div>
             
-            <div className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow transform hover:-translate-y-1 duration-300">
               <Database className="h-10 w-10 text-india-green mb-4" />
               <h3 className="text-lg font-semibold mb-2">DigiLocker</h3>
               <p className="text-gray-600 text-sm">
-                Secure cloud-based platform for document storage, sharing and verification.
+                Secure cloud-based platform for document storage, sharing and verification, reducing paperwork and enabling easy access to official documents.
               </p>
             </div>
             
-            <div className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow transform hover:-translate-y-1 duration-300">
               <BellRing className="h-10 w-10 text-india-navyBlue mb-4" />
               <h3 className="text-lg font-semibold mb-2">UMANG</h3>
               <p className="text-gray-600 text-sm">
-                Unified Mobile Application for New-age Governance providing multiple government services.
+                Unified Mobile Application for New-age Governance providing multiple government services in multiple languages for citizens across India.
               </p>
+            </div>
+          </div>
+          
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-india-navyBlue/5 rounded-lg p-6 shadow-sm border-l-4 border-india-saffron">
+              <div className="flex items-start">
+                <Brain className="h-10 w-10 text-india-saffron mr-4 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">AI-Powered Governance</h3>
+                  <p className="text-gray-600">
+                    ChakraShield represents the next generation of AI applications in governance, using cutting-edge machine learning algorithms to identify patterns in social media data that indicate fake or malicious accounts. This technology allows for:
+                  </p>
+                  <ul className="mt-3 space-y-1 list-disc list-inside text-gray-600">
+                    <li>Real-time threat detection across multiple platforms</li>
+                    <li>Behavioral analysis to identify coordinated inauthentic behavior</li>
+                    <li>Predictive intelligence to stop emerging threats</li>
+                    <li>Reduced manual verification workload for security agencies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-india-navyBlue/5 rounded-lg p-6 shadow-sm border-l-4 border-india-green">
+              <div className="flex items-start">
+                <Cpu className="h-10 w-10 text-india-green mr-4 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Technological Impact</h3>
+                  <p className="text-gray-600">
+                    The implementation of ChakraShield has significant positive impacts on India's digital ecosystem:
+                  </p>
+                  <ul className="mt-3 space-y-1 list-disc list-inside text-gray-600">
+                    <li>Reduced spread of misinformation by up to 67%</li>
+                    <li>Enhanced public trust in digital platforms</li>
+                    <li>Protection of citizens from scams and phishing attempts</li>
+                    <li>Creation of a safer online environment for all Indians</li>
+                    <li>Blockchain-verified evidence for legal proceedings</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

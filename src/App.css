@@ -172,3 +172,183 @@ html {
     background-position: 200% center;
   }
 }
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Enhanced card with chakra animation */
+.card-with-chakra {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-with-chakra::before {
+  content: '';
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  width: 100px;
+  height: 100px;
+  background-image: url('/lovable-uploads/6b65ab93-76a6-4042-8a08-74e62c5a8722.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  transition: opacity 0.3s ease;
+}
+
+.card-with-chakra:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-with-chakra:hover::before {
+  opacity: 0.1;
+}
+
+/* Reveal animation */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Perspective card hover effect */
+.perspective-card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.perspective-card:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+}
+
+/* Focus border animation */
+.focus-border {
+  position: relative;
+}
+
+.focus-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ff9933;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.focus-border:hover::after, 
+.focus-border:focus::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Government portal badge */
+.govt-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  background-color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.govt-badge::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #ff9933;
+}
+
+.govt-badge::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #138808;
+}
+
+/* Grow and shrink animation */
+@keyframes grow-shrink {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.grow-shrink-animation {
+  animation: grow-shrink 3s infinite;
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end);
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.6s;
+}
