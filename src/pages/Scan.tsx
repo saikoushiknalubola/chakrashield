@@ -1,21 +1,19 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import Hero from '@/components/landing/Hero';
-import Features from '@/components/landing/Features';
+import ProfileScanner from '@/components/scanner/ProfileScanner';
 import Footer from '@/components/Footer';
 
-const Index = () => {
+const Scan = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
-        <Hero />
-        <Features />
+        <ProfileScanner />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Scan;

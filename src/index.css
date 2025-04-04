@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +100,27 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utilities for the ChakraShield application */
+@layer components {
+  .india-border {
+    @apply border-l-[3px] border-l-india-saffron border-t-[3px] border-t-india-saffron 
+           border-r-[3px] border-r-india-green border-b-[3px] border-b-india-green;
+  }
+  
+  .india-tricolor-border {
+    @apply relative before:absolute before:top-0 before:left-0 before:w-full before:h-[3px] before:bg-india-saffron
+           after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-india-green;
+  }
+  
+  .card-with-chakra {
+    @apply relative overflow-hidden;
+  }
+  
+  .card-with-chakra::before {
+    content: '';
+    @apply absolute -right-8 -bottom-8 w-24 h-24 bg-[url('/public/lovable-uploads/6b65ab93-76a6-4042-8a08-74e62c5a8722.png')] bg-contain bg-no-repeat opacity-10;
   }
 }

@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Indian flag inspired colors
+				india: {
+					saffron: '#FF9933',
+					white: '#FFFFFF',
+					green: '#138808',
+					navyBlue: '#000080',
+					ashoka: '#0000b3'
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,23 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'spin-slow': 'spin-slow 8s linear infinite'
+			},
+			fontFamily: {
+				sans: ['Noto Sans', 'sans-serif'],
+				devanagari: ['Noto Sans Devanagari', 'sans-serif']
+			},
+			backgroundImage: {
+				'india-gradient': 'linear-gradient(to bottom, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%)'
 			}
 		}
 	},

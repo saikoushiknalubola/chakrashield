@@ -1,21 +1,19 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import Hero from '@/components/landing/Hero';
-import Features from '@/components/landing/Features';
+import BlockchainRegistry from '@/components/blockchain/BlockchainRegistry';
 import Footer from '@/components/Footer';
 
-const Index = () => {
+const Blockchain = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
-        <Hero />
-        <Features />
+        <BlockchainRegistry />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Blockchain;
