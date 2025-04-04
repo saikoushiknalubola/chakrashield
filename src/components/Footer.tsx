@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Shield, ExternalLink, Mail, Phone, HelpCircle, Code } from 'lucide-react';
 import { Link } from "react-router-dom";
@@ -8,18 +7,22 @@ const Footer = () => {
   return (
     <footer className="bg-india-navyBlue text-white">
       <div className="container mx-auto px-4 py-8">
+
+        {/* Top Branding Section */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="flex items-center mb-6 md:mb-0">
             <Shield className="h-8 w-8 text-india-saffron mr-3" />
             <div>
               <div className="flex items-center">
-                <h3 className="text-xl font-bold mr-2 bg-gradient-to-r from-india-saffron to-white bg-clip-text text-transparent">ChakraShield</h3>
+                <h3 className="text-xl font-bold mr-2 bg-gradient-to-r from-india-saffron to-white bg-clip-text text-transparent">
+                  ChakraShield
+                </h3>
                 <AshokChakra size="sm" />
               </div>
               <p className="text-xs font-devanagari text-white/90">साइबर सुरक्षा प्रणाली</p>
             </div>
           </div>
-          
+
           <div className="text-center md:text-right">
             <div className="flex items-center justify-center md:justify-end space-x-1 mb-2">
               <span className="w-3 h-3 bg-india-saffron rounded-full"></span>
@@ -29,7 +32,8 @@ const Footer = () => {
             <p className="text-sm text-gray-300">Cyber Security Excellence</p>
           </div>
         </div>
-        
+
+        {/* Links Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h4 className="font-semibold mb-3 text-india-saffron">Platform</h4>
@@ -41,7 +45,7 @@ const Footer = () => {
               <li><Link to="/alerts" className="hover:text-india-saffron transition-colors">Alerts</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-3 text-india-saffron">Resources</h4>
             <ul className="space-y-2 text-sm">
@@ -51,7 +55,7 @@ const Footer = () => {
               <li><Link to="/research" className="hover:text-india-saffron transition-colors">Research Papers</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-3 text-india-saffron">Policies</h4>
             <ul className="space-y-2 text-sm">
@@ -61,7 +65,7 @@ const Footer = () => {
               <li><Link to="/accessibility" className="hover:text-india-saffron transition-colors">Accessibility</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-3 text-india-saffron">Contact</h4>
             <ul className="space-y-2 text-sm">
@@ -80,8 +84,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
-        {/* Developer credit section */}
+
+        {/* Developer Credit Section */}
         <div className="py-4 my-4 border-t border-b border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4">
             <div className="flex items-center">
@@ -89,11 +93,19 @@ const Footer = () => {
               <span className="font-medium">Developed by:</span>
             </div>
             <div className="bg-white/10 px-4 py-2 rounded-full">
-              <span className="font-bold text-india-saffron">Saikoushik Nalubola</span>
+              <a
+                href="https://www.linkedin.com/in/saikoushiknalubola/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-india-saffron hover:underline"
+              >
+                Saikoushik Nalubola
+              </a>
             </div>
           </div>
         </div>
-        
+
+        {/* Footer Bottom */}
         <div className="pt-6 border-t border-white/10 text-sm text-center md:flex md:justify-between md:items-center">
           <p>© 2025 ChakraShield - All rights reserved</p>
           <div className="mt-4 md:mt-0 flex flex-wrap justify-center md:justify-end gap-4">
@@ -103,6 +115,7 @@ const Footer = () => {
             <Link to="/accessibility" className="hover:text-india-saffron transition-colors">Accessibility</Link>
           </div>
         </div>
+
       </div>
     </footer>
   );
