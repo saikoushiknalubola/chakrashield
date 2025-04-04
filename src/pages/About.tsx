@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Shield, Award, CheckCircle, Database, AlertTriangle, FileText, Lock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -52,7 +51,7 @@ const About = () => {
               <Shield className="h-16 w-16 text-india-saffron mr-4" />
               <div>
                 <h1 className="text-4xl font-bold flex items-center">
-                  ChakraShield 
+                  ChakraShield
                   <AshokChakra size="md" className="ml-2" />
                 </h1>
                 <p className="text-xl font-devanagari">साइबर सुरक्षा प्रणाली</p>
@@ -83,7 +82,7 @@ const About = () => {
               To safeguard India's digital space by leveraging advanced technology to identify and neutralize fake social media accounts that pose threats to national security and social harmony.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center card-hover border-2 border-gray-200">
               <CardHeader>
@@ -98,7 +97,7 @@ const About = () => {
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="text-center card-hover border-2 border-gray-200">
               <CardHeader>
                 <CardTitle className="text-india-navyBlue">Analyze</CardTitle>
@@ -112,7 +111,7 @@ const About = () => {
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="text-center card-hover border-2 border-gray-200">
               <CardHeader>
                 <CardTitle className="text-india-navyBlue">Secure</CardTitle>
@@ -142,7 +141,7 @@ const About = () => {
               ChakraShield combines cutting-edge AI technologies with blockchain verification to provide a comprehensive defense against fake social media accounts.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="card-hover border-2 border-gray-200">
@@ -164,9 +163,9 @@ const About = () => {
             <div className="p-8 text-white">
               <div className="flex flex-col md:flex-row items-center">
                 <div className="mb-6 md:mb-0 md:mr-8">
-                  <img 
-                    src="/https://postimg.cc/jL7gtYHc" 
-                    alt="Digital India Initiative" 
+                  <img
+                    src="https://i.postimg.cc/jL7gtYHc/digital-india-logo.png"
+                    alt="Digital India Initiative"
                     className="h-24"
                   />
                 </div>
@@ -199,7 +198,7 @@ const About = () => {
   );
 };
 
-// Custom icon components for the mission section
+// Custom icon components
 const SearchIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="11" cy="11" r="8"></circle>
