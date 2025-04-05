@@ -1,81 +1,88 @@
 
-# 🛡️ ChakraShield – Fake Social Media Account Detection System
+# ChakraShield: Nation-Grade Fake Social Media Account Detection Platform
 
-**ChakraShield** is a highly innovative and secure web-based platform designed to **detect, report, and aid in the elimination of fake social media accounts** across platforms such as Facebook, Instagram, and X (formerly Twitter). Tailored for national cybersecurity needs, especially for government and defense agencies like ITBP, ChakraShield blends Artificial Intelligence, Machine Learning, and Blockchain technology to ensure digital trust and user authenticity.
-
-> 🌐 **Live Prototype**: [chakra-shield-sentinel.lovable.app](https://chakra-shield-sentinel.lovable.app)
+**ChakraShield** is a government-ready cybersecurity initiative designed to detect, report, and neutralize fake social media accounts across platforms like Facebook, Instagram, Twitter (X), and others. Built for national security agencies and social platforms, ChakraShield serves as a central AI-powered sentinel to ensure digital integrity, counter misinformation, and prevent social engineering threats via impersonation.
 
 ---
 
-## ✨ Key Features
+## 🛡️ Why ChakraShield?
 
-- 🔍 **AI/ML-Powered Detection** – Uses NLP and image recognition to detect suspicious behavior, fake identities, and bot-like patterns.
-- 🧠 **BERT-based Language Model** – Scans bio, comments, and activity for harmful language, propaganda, and impersonation.
-- 🧑‍🦰 **DeepFace Integration** – Validates profile images using facial recognition against known datasets.
-- 📊 **Suspicious Score System** – Every profile is assigned a trust score based on multiple factors (text/image/time/IP).
-- 🏢 **Centralized Reporting Dashboard (ChakraPanel)** – Government agencies can view, verify, and report accounts to platforms.
-- 🔐 **Blockchain Logging** – Ensures tamper-proof evidence trails and proof-of-reporting for legal use.
-- 🔔 **Real-time Alerts** – Admins are alerted of fake account activities immediately through the ChakraShield system.
-- 📄 **Report Generation** – Fake profiles are logged and printable reports are generated for platform and legal action.
-- 📲 **Integration with Official Social Media APIs** – Real-time profile scanning and flagging using developer APIs.
+Fake social media accounts pose a severe threat to national security, civil discourse, and online safety. From spreading misinformation to impersonating officials and agencies, these accounts erode trust in digital platforms and endanger real-world outcomes. ChakraShield is designed to help government agencies proactively identify and dismantle such accounts before they can do harm.
 
 ---
 
-##  System Architecture
+## 🔍 What Does ChakraShield Do?
+
+- Detects fake social media accounts using AI-powered profiling, behavior analysis, and metadata verification.
+- Flags accounts based on language patterns, activity anomalies, profile inconsistencies, and network graph analysis.
+- Supports Facebook, Instagram, Twitter (X), and other platforms through extensible APIs.
+- Provides a real-time central dashboard for verification authorities.
+- Reports accounts to concerned platforms and law enforcement in a time-bound, traceable, and automated process.
+
+---
+
+## 🌐 Live Demo
+
+▶️ Visit: [chakra-shield-sentinel.lovable.app](https://chakra-shield-sentinel.lovable.app/)
+
+![ChakraShield Live Demo](https://i.ibb.co/S74wtM4G/9psoad.gif)
+
+---
+
+## 🧠 Key Features
+
+- **Dravidian-AI Aesthetic**: UI aligned with Indian government identity with multilingual support.
+- **AI-Powered Detection**: Deep learning models analyze fake account traits using NLP and image forensics.
+- **Real-Time Flagging**: Auto-classifies accounts in real time based on risk levels.
+- **Government Workflow Integration**: Centralized fake profile repository with role-based access for law enforcement and ministries.
+- **Whistleblower Mode**: Citizens can report suspicious accounts anonymously.
+- **Automated Escalation**: Sends takedown reports to social platforms via API integration.
+- **QR-based Onboarding**: Easy identity verification for real user onboarding.
+- **Zero Trust Architecture**: Every user, device, and request is verified before access.
+
+---
+
+## 🏛️ Government Alignment & Vision
+
+ChakraShield is envisioned as a **Digital India** and **Cyber Suraksha** initiative. It aligns with India's strategic efforts in:
+
+- Ensuring **social media accountability**
+- Securing internal border communication channels
+- Preventing **Left-Wing Extremism propaganda**
+- Combating **AI-generated misinformation and impersonation**
+
+A central authority can manage ChakraShield, integrating with platforms for API-based takedown pipelines and deploying nation-wide policy enforcement.
+
+---
+
+## 🗂️ Architecture Overview
 
 ```
-User → ChakraShield Web Portal → AI/ML Engine → Confidence Scoring → ChakraPanel Dashboard → Blockchain Log → Social Media Platforms
+User Input ➝ AI Classifier ➝ Behavior Analyzer ➝ Verification Engine ➝ Flagging Dashboard ➝ Platform Escalation API
 ```
 
-**Tech Stack:**
+**System Components:**
 
-- **Frontend**: HTML, CSS, Bootstrap (React in roadmap)
-- **Backend**: FastAPI (Python)
-- **ML Models**: BERT, DeepFace, Random Forest
-- **Database**: MongoDB (NoSQL)
-- **Authentication**: Firebase Auth + JWT
-- **Reporting**: PDF generation, export to CSV
-- **Hosting**: AWS EC2 / Firebase Hosting
-
----
-
-## 🔁 How It Works
-
-1. User or admin enters a suspected profile link or username.
-2. ChakraShield fetches public profile details via API.
-3. ML models analyze profile image, username pattern, and activity.
-4. Trustworthiness score is calculated.
-5. Fake/suspicious accounts are flagged with reason & score.
-6. Central agency gets real-time alert and dashboard visibility.
-7. Verified reports are sent to platforms via email/API.
-8. Logs are hashed and saved on blockchain for legal trail.
-
-
+- Frontend (React + TypeScript)
+- Backend (Node.js / FastAPI)
+- AI Engine (NLP + CV models via Python)
+- MongoDB / PostgreSQL
+- Secure Admin Panel for Authorities
+- Notification System (Email + SMS + Dashboard Alerts)
 
 ---
 
-## 🧩 Future Enhancements
+## 👥 Team Details
 
-- 🤖 Add deep fake detection using GAN inversion techniques.
-- 🇮🇳 Integration with DigiLocker for real ID verification.
-- 📞 Emergency contact features for direct legal or defense agency alerts.
-- 🧾 Aadhaar/EPIC verification API for critical profiles (only for government use).
-- 📚 National AI Training Dataset expansion with CERT-In.
+- **Saikoushik Nalubola** – 2403A52L02  
+- **Syed Althaf** – 2303A52496  
+- **D Nihaal Krishna** – 230A52498  
 
 ---
 
-## 👨‍💻 Team ChakraShield – Contributors
+## 📌 Use Case Scenarios
 
-| Name                   | Roll Number   |
-|------------------------|---------------|
-| Saikoushik Nalubola    | 2403A52L02     |
-| Syed Althaf            | 2303A52496     |
-| D Nihaal Krishna       | 2303A52498     |
-
----
-
-## 🛡️ Vision
-
-> **“To empower the nation’s digital boundaries and eliminate the threat of impersonation, propaganda, and cyber psychological operations (CYPsyOps) with AI and trust.”**
-
----
+- Border Security Forces (e.g., ITBP) detecting fake accounts targeting officers
+- Central Government monitoring election misinformation
+- Cyber Crime Cells using ChakraShield for rapid escalations
+- Universities or agencies monitoring impersonation of officials
